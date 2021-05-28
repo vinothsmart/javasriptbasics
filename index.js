@@ -12,7 +12,7 @@
 // console.log("end");
 
 // Async
-console.log("start");
+// console.log("start");
 
 // setTimeOut is also called as callback function
 // callback function are not Async functions
@@ -21,11 +21,24 @@ console.log("start");
 //   console.log("we are now in timeout");
 // }, 2000);
 
-const items = [1, 2, 3, 4, 5];
+// const items = [1, 2, 3, 4, 5];
 
-// Using Forach inside we arrow function this is callback function
-items.forEach((item) => {
-  console.log(item);
-});
+// // Using Forach inside we arrow function this is callback function
+// items.forEach((item) => {
+//   console.log(item);
+// });
 
-console.log("end");
+// console.log("end");
+
+// Another Async Javascript function
+
+function loginUser(email, password) {
+  setTimeout(() => {
+    console.log({ user: email });
+  }, 3000);
+}
+
+console.log("start");
+
+const user = loginUser("vino@gmail.com", "12345");
+console.log(user);
