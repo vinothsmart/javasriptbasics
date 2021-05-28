@@ -32,13 +32,24 @@
 
 // Another Async Javascript function
 
-function loginUser(email, password) {
+function loginUser(email, password, callback) {
   setTimeout(() => {
-    console.log({ user: email });
+    callback({ user: email });
   }, 3000);
 }
 
 console.log("start");
 
-const user = loginUser("vino@gmail.com", "12345");
-console.log(user);
+const user = loginUser("vino@gmail.com", "12345", (user) => {
+  console.log(user);
+});
+
+/**
+ * output like this
+ * 
+ *
+ *  start
+undefined
+{ user: 'vino@gmail.com' }
+Need to fix this by callback func
+ */
