@@ -53,3 +53,9 @@ undefined
 { user: 'vino@gmail.com' }
 Need to fix this by callback func
  */
+
+/**
+ * Using that callback we fixed
+ * start
+{ user: 'vino@gmail.com' }
+ */
