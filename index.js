@@ -59,5 +59,3 @@ Need to fix this by callback func
  * start
 { user: 'vino@gmail.com' }
  */
-
-// Added Comment
