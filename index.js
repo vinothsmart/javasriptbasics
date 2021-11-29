@@ -38,10 +38,16 @@ function loginUser(email, password, callback) {
   }, 3000);
 }
 
-function getUsersVideos(video, callback) {
+function getUsersVideos(email, callback) {
   setTimeout(() => {
     callback(["vid1", "vid2", "vid3"]);
   }, 3000);
+}
+
+function videoDetails(video, callback) {
+  setTimeout(() => {
+    callback("video description here");
+  }, 2000);
 }
 
 console.log("start");
@@ -50,6 +56,9 @@ const user = loginUser("vino@gmail.com", "12345", (user) => {
   // console.log(user);
   getUsersVideos(user, (videos) => {
     console.log(videos);
+    videoDetails(videos[0], (detail) => {
+      console.log(detail);
+    });
   });
 });
 
