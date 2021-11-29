@@ -54,7 +54,7 @@ console.log("start");
 
 const user = loginUser("vino@gmail.com", "12345", (user) => {
   // console.log(user);
-  getUsersVideos(user, (videos) => {
+  getUsersVideos(user.email, (videos) => {
     console.log(videos);
     videoDetails(videos[0], (detail) => {
       console.log(detail);
