@@ -54,7 +54,7 @@ console.log("start");
 
 const user = loginUser("vino@gmail.com", "12345", (user) => {
   // console.log(user);
-  getUsersVideos(user.email, (videos) => {
+  getUsersVideos(user.user, (videos) => {
     console.log(videos);
     videoDetails(videos[0], (detail) => {
       console.log(detail);
@@ -77,3 +77,9 @@ Need to fix this by callback func
  * start
 { user: 'vino@gmail.com' }
  */
+
+function randomNum(min, max, callback) {
+  setTimeout(() => {
+    callback(Math.floor(Math.random() * (max - min + 1) + min));
+  }, 2000);
+}
