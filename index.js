@@ -85,15 +85,44 @@ Need to fix this by callback func
 // }
 
 // create a function that generates a random number
-function randomNum(min, max, callback) {
-  setTimeout(() => {
-    callback(Math.floor(Math.random() * (max - min + 1) + min));
-  }, 2000);
-}
+// function randomNum(min, max, callback) {
+//   setTimeout(() => {
+//     callback(Math.floor(Math.random() * (max - min + 1) + min));
+//   }, 2000);
+// }
 
 // create function to get yesterdays date
-function getYesterday() {
-  const date = new Date();
-  date.setDate(date.getDate() - 1);
-  return date;
-}
+// function getYesterday() {
+//   const date = new Date();
+//   date.setDate(date.getDate() - 1);
+//   return date;
+// }
+
+// create array of numbers
+const numbers = [1, 2, 3, 4, 5];
+
+// create array of 5 names
+const names = ["vino", "vinod", "vinodh", "vinodh1", "vinodh2"];
+
+// create an array of objects with id , name and age
+const users = [
+  { id: 1, name: "vino", age: 30 },
+  { id: 2, name: "vinod", age: 25 },
+  { id: 3, name: "Kanna", age: 20 },
+  { id: 4, name: "Ajitha", age: 25 },
+  { id: 5, name: "Vignesh", age: 20 },
+];
+
+//order the array of objects by age
+const orderedUsers = users.sort((a, b) => {
+  return a.age - b.age;
+});
+
+// get only people whos name starts with V and order by age ascending
+const vinodUsers = users
+  .filter((user) => {
+    return user.name.startsWith("V");
+  })
+  .sort((a, b) => {
+    return a.age - b.age;
+  });
