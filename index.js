@@ -78,8 +78,22 @@ Need to fix this by callback func
 { user: 'vino@gmail.com' }
  */
 
+// function randomNum(min, max, callback) {
+//   setTimeout(() => {
+//     callback(Math.floor(Math.random() * (max - min + 1) + min));
+//   }, 2000);
+// }
+
+// create a function that generates a random number
 function randomNum(min, max, callback) {
   setTimeout(() => {
     callback(Math.floor(Math.random() * (max - min + 1) + min));
   }, 2000);
+}
+
+// create function to get yesterdays date
+function getYesterday() {
+  const date = new Date();
+  date.setDate(date.getDate() - 1);
+  return date;
 }
